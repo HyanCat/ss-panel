@@ -28,9 +28,6 @@
                         </dl>
 
                     </div>
-                    <div class="box-footer">
-                        <a class="btn btn-danger btn-sm" href="kill">删除我的账户</a>
-                    </div>
                     <!-- /.box -->
                 </div>
             </div>

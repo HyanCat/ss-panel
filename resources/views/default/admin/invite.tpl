@@ -41,15 +41,7 @@
                                 <label for="cate_title" class="col-sm-3 control-label">邀请码前缀</label>
 
                                 <div class="col-sm-9">
-                                    <input class="form-control" id="prefix" placeholder="小于8个字符">
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="cate_title" class="col-sm-3 control-label">邀请码类别</label>
-
-                                <div class="col-sm-9">
-                                    <input class="form-control" id="uid" type="number" placeholder="0为公开，其他数字为对应用户的UID">
+                                    <input class="form-control" id="prefix" placeholder="小于8个字符, 可不填">
                                 </div>
                             </div>
 
@@ -70,17 +62,46 @@
 
                 </div>
             </div>
-            <div class="col-md-6">
+            <!-- /.box -->
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <!-- general form elements -->
                 <div class="box box-primary">
                     <div class="box-header">
-                        <h3 class="box-title">注意</h3>
+                        <i class="fa fa-rocket"></i>
+
+                        <h3 class="box-title">邀请</h3>
                     </div>
-                    <div class="box-footer">
-                        <p>公共邀请码（类别为0的邀请码）请<a href="/code">在这里查看</a>。</p>
+                    <!-- /.box -->
+                    <div class="box-header">
+                        <h3 class="box-title">我的邀请码</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                            <tr>
+                                <th>###</th>
+                                <th>邀请码(点右键复制链接)</th>
+                                <th>状态</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {foreach $codes as $code}
+                                <tr>
+                                    <td><b>{$code->id}</b></td>
+                                    <td>
+                                        <a href="/auth/register?code={$code->code}" target="_blank">{$code->code}</a>
+                                    </td>
+                                    <td>可用</td>
+                                </tr>
+                            {/foreach}
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
-            <!-- /.box -->
         </div>
         <!-- /.row -->
     </section>
@@ -91,15 +112,15 @@
     $(document).ready(function () {
         $("#invite").click(function () {
             $.ajax({
-                type: "POST",
-                url: "/admin/invite",
+                type    : "POST",
+                url     : "/admin/invite",
                 dataType: "json",
-                data: {
+                data    : {
                     prefix: $("#prefix").val(),
-                    uid: $("#uid").val(),
-                    num: $("#num").val()
+                    uid   : $("#uid").val(),
+                    num   : $("#num").val()
                 },
-                success: function (data) {
+                success : function (data) {
                     if (data.ret) {
                         $("#msg-success").show(100);
                         $("#msg-success-p").html(data.msg);
@@ -107,7 +128,7 @@
                     }
                     // window.location.reload();
                 },
-                error: function (jqXHR) {
+                error   : function (jqXHR) {
                     alert("发生错误：" + jqXHR.status);
                 }
             })
