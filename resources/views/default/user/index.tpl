@@ -14,7 +14,7 @@
     <section class="content">
         <!-- START PROGRESS BARS -->
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="box box-primary">
                     <div class="box-header">
                         <i class="fa fa-bullhorn"></i>
@@ -64,34 +64,6 @@
                 </div>
                 <!-- /.box -->
             </div>
-            <!-- /.col (left) -->
-
-            <div class="col-md-6">
-                <div class="box box-primary">
-                    <div class="box-header">
-                        <i class="fa fa-pencil"></i>
-
-                        <h3 class="box-title">签到获取流量</h3>
-                    </div>
-                    <!-- /.box-header -->
-                    <div class="box-body">
-                        <p> 每{$config['checkinTime']}小时可以签到一次。</p>
-
-                        <p>上次签到时间：<code>{$user->lastCheckInTime()}</code></p>
-                        {if $user->isAbleToCheckin() }
-                            <p id="checkin-btn">
-                                <button id="checkin" class="btn btn-success  btn-flat">签到</button>
-                            </p>
-                        {else}
-                            <p><a class="btn btn-success btn-flat disabled" href="#">不能签到</a></p>
-                        {/if}
-                        <p id="checkin-msg"></p>
-                    </div>
-                    <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-            </div>
-            <!-- /.col (right) -->
 
             <div class="col-md-6">
                 <div class="box box-primary">

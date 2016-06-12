@@ -20,11 +20,9 @@
     <script src="/assets/public/js/jquery.min.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// --><!--[if lt IE 9]>
     <script src="//cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
-    <script src="//cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
+    <script src="//cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script><![endif]-->
 </head>
 <body class="skin-blue">
 <!-- Site wrapper -->
@@ -91,54 +89,57 @@
 
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
+                <div class="pull-right info">
+                    {if $user->isAdmin()}
+                        <a href="/admin">
+                            <i class="fa fa-cog"></i>
+                            <span>管理面板</span>
+                        </a>
+                    {/if}
+                </div>
             </div>
 
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
                 <li>
                     <a href="/user">
-                        <i class="fa fa-dashboard"></i> <span>用户中心</span>
+                        <i class="fa fa-dashboard"></i>
+                        <span>用户中心</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="/user/node">
-                        <i class="fa fa-sitemap"></i> <span>节点列表</span>
-                    </a>
-                </li>
+                {*<li>*}
+                {*<a href="/user/node">*}
+                {*<i class="fa fa-sitemap"></i> <span>节点列表</span>*}
+                {*</a>*}
+                {*</li>*}
 
                 <li>
                     <a href="/user/profile">
-                        <i class="fa fa-user"></i> <span>我的信息</span>
+                        <i class="fa fa-user"></i>
+                        <span>我的信息</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="/user/trafficlog">
-                        <i class="fa fa-history"></i> <span>流量记录</span>
-                    </a>
-                </li>
+                {*<li>*}
+                {*<a href="/user/trafficlog">*}
+                {*<i class="fa fa-history"></i> <span>流量记录</span>*}
+                {*</a>*}
+                {*</li>*}
 
 
                 <li>
                     <a href="/user/edit">
-                        <i class="fa  fa-pencil"></i> <span>修改资料</span>
+                        <i class="fa  fa-pencil"></i>
+                        <span>修改资料</span>
                     </a>
                 </li>
 
-                <li>
-                    <a href="/user/invite">
-                        <i class="fa fa-users"></i> <span>邀请好友</span>
-                    </a>
-                </li>
-
-                {if $user->isAdmin()}
-                    <li>
-                        <a href="/admin">
-                            <i class="fa fa-cog"></i> <span>管理面板</span>
-                        </a>
-                    </li>
-                {/if}
+                {*<li>*}
+                {*<a href="/user/invite">*}
+                {*<i class="fa fa-users"></i> <span>邀请好友</span>*}
+                {*</a>*}
+                {*</li>*}
 
             </ul>
         </section>

@@ -89,6 +89,14 @@
 
                     <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                 </div>
+                <div class="pull-right info">
+                    {if $user->isAdmin()}
+                        <a href="/user">
+                            <i class="fa fa-reply-all"></i>
+                            <span>用户中心</span>
+                        </a>
+                    {/if}
+                </div>
             </div>
 
             <!-- sidebar menu: : style can be found in sidebar.less -->
@@ -105,11 +113,11 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="/admin/node">
-                        <i class="fa fa-sitemap"></i> <span>节点管理</span>
-                    </a>
-                </li>
+                {*<li>*}
+                    {*<a href="/admin/node">*}
+                        {*<i class="fa fa-sitemap"></i> <span>节点管理</span>*}
+                    {*</a>*}
+                {*</li>*}
 
                 <li>
                     <a href="/admin/user">
@@ -123,24 +131,17 @@
                     </a>
                 </li>
 
-                <li>
-                    <a href="/admin/trafficlog">
-                        <i class="fa fa-history"></i> <span>流量记录</span>
-                    </a>
-                </li>
+                {*<li>*}
+                    {*<a href="/admin/trafficlog">*}
+                        {*<i class="fa fa-history"></i> <span>流量记录</span>*}
+                    {*</a>*}
+                {*</li>*}
 
-                <li>
-                    <a href="/admin/checkinlog">
-                        <i class="fa  fa-check-square"></i> <span>签到日志</span>
-                    </a>
-                </li>
-
-                <li>
-                    <a href="/user">
-                        <i class="fa fa-reply-all"></i> <span>用户中心</span>
-                    </a>
-                </li>
-
+                {*<li>*}
+                    {*<a href="/admin/checkinlog">*}
+                        {*<i class="fa  fa-check-square"></i> <span>签到日志</span>*}
+                    {*</a>*}
+                {*</li>*}
 
             </ul>
         </section>

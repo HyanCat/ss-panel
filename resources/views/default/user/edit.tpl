@@ -109,19 +109,6 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
-                                <label class="col-sm-3 control-label">加密方式</label>
-
-                                <div class="col-sm-9">
-                                    <div class="input-group">
-                                        <input type="text" id="method" placeholder="输入新加密方式" class="form-control">
-                                        <div class="input-group-btn">
-                                            <button type="submit" id="method-update" class="btn btn-primary">修改</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                         <div class="box-footer"></div>
                     </div>
