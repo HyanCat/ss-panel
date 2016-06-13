@@ -139,14 +139,6 @@
                                 </fieldset>
                                 <fieldset class="col-sm-6">
                                     <legend>邀请</legend>
-                                    <div class="form-group">
-                                        <label class="col-sm-3 control-label">可用邀请数量</label>
-
-                                        <div class="col-sm-9">
-                                            <input class="form-control" id="invite_num" type="number"
-                                                   value="{$user->invite_num}">
-                                        </div>
-                                    </div>
 
                                     <div class="form-group">
                                         <label class="col-sm-3 control-label">邀请人ID</label>

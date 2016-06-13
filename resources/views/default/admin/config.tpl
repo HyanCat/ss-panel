@@ -59,12 +59,6 @@
                                           placeholder="Enter ...">{$conf['user-index']}</textarea>
                             </div>
 
-                            <div class="form-group">
-                                <label>用户节点公告</label>
-                                <textarea class="form-control" id="user-node" rows="3"
-                                          placeholder="Enter ...">{$conf['user-node']}</textarea>
-                            </div>
-
                         </form>
                     </div>
                     <!-- /.box-body -->
@@ -74,15 +68,6 @@
                         </button>
                     </div>
 
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="box box-primary">
-                    <div class="box-header">
-                        <h3 class="box-title">其他信息</h3>
-                    </div>
-                    <div class="box-footer">
-                    </div>
                 </div>
             </div>
             <!-- /.box -->

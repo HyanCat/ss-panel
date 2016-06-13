@@ -74,27 +74,19 @@
                         <h3 class="box-title">邀请</h3>
                     </div>
                     <!-- /.box -->
-                    <div class="box-header">
-                        <h3 class="box-title">我的邀请码</h3>
-                    </div>
-                    <!-- /.box-header -->
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
                             <tr>
-                                <th>###</th>
-                                <th>邀请码(点右键复制链接)</th>
-                                <th>状态</th>
+                                <th>邀请码(点右键复制文本或邀请链接)</th>
                             </tr>
                             </thead>
                             <tbody>
                             {foreach $codes as $code}
                                 <tr>
-                                    <td><b>{$code->id}</b></td>
                                     <td>
                                         <a href="/auth/register?code={$code->code}" target="_blank">{$code->code}</a>
                                     </td>
-                                    <td>可用</td>
                                 </tr>
                             {/foreach}
                             </tbody>
@@ -117,16 +109,15 @@
                 dataType: "json",
                 data    : {
                     prefix: $("#prefix").val(),
-                    uid   : $("#uid").val(),
+//                    uid   : $("#uid").val(),
                     num   : $("#num").val()
                 },
                 success : function (data) {
                     if (data.ret) {
                         $("#msg-success").show(100);
                         $("#msg-success-p").html(data.msg);
-                        //window.setTimeout("location.href='/admin/invite'", 2000);
                     }
-                    // window.location.reload();
+                    window.location.reload();
                 },
                 error   : function (jqXHR) {
                     alert("发生错误：" + jqXHR.status);
